@@ -1,0 +1,103 @@
+/* Container pentru header */
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background: none;
+  border: none;
+  position: relative;
+  top: -100px; /* Muta butoanele mai sus, ajustați valoarea după necesitate */
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Butoane aliniate în dreapta */
+.button-container {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-left: 20px;
+  margin-top: -5px; /* Muta butoanele mai sus, ajustați valoarea după necesitate */
+}
+
+/* Stilizare butoane */
+.button-option {
+  background-color: #f1f1f1;
+  border: none;
+  color: #333;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.button-option:hover {
+  background-color: #ddd;
+}
+
+.button-option.active {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Stilizare dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  top: -10px;
+}
+
+.dropdown-toggle {
+  background-color: white;
+  color: black;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-width: 240px;
+}
+
+.dropdown-toggle img.dropdown-arrow {
+  margin-left: 8px;
+  width: 16px;
+}
+
+.dropdown-toggle:hover {
+  background-color: #595656;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  min-width: 240px;
+  z-index: 1;
+}
+
+.dropdown-menu .dropdown-item {
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  color: black;
+  transition: background-color 0.3s ease;
+}
+
+.dropdown-menu .dropdown-item:hover {
+  background-color: #595656;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
